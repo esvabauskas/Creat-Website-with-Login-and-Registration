@@ -20,9 +20,14 @@ showPopupBtn.addEventListener("click", () => {
 });
 
 // Hide login popup
-hidePopupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formPopup.classList[signupLoginLink.id === "signup-link" ? "add" : "remove"](
-    "show-signup"
-  );
+hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
+
+// Show or hide signup form
+signupLoginLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    formPopup.classList[link.id === "signup-link" ? "add" : "remove"](
+      "show-signup"
+    );
+  });
 });
