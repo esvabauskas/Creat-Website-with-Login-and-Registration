@@ -262,7 +262,7 @@ form button:hover {
   display: none;
 }
 
-form-popup.show-signup .signup {
+.form-popup .show-signup .signup {
   display: flex;
 }
 .signup .policy-text {
